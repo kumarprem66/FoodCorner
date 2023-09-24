@@ -1,5 +1,4 @@
-# FoodCorner
-Food Delivery app built using Angular and JSON server
+![logo](https://github.com/kumarprem66/FoodCorner/blob/main/foodporject.jpg)
 
 # FoodCorner Website
 
