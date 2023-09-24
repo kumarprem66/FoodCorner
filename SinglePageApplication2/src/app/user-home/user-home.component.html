@@ -1,0 +1,37 @@
+<div class="div_container">
+
+
+  <div class="sort_and_filter">
+
+    
+
+  </div>
+
+
+
+    <div class="mycard card" style="width: 15rem; height: auto;" *ngFor="let item of menusItem">
+      <img src="{{ item.image }}" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{{ item.name }}</h5>
+        <!-- <textarea class="card-text" rows="5" cols="30" onscroll="">{{item.details}}</textarea> -->
+        <p class="card-text">Category - {{ item.category }}</p>
+        <p class="card-text">Price - {{ item.price }}</p>
+        <button class="card-link" (click)="add_to_cart(item.id)">Add to cart</button>
+        <button class="card-link" (click)="giveInstruc(item.id)">Instruction</button>
+      </div>
+  
+     
+    </div>
+  
+    <div class="popup" *ngIf="showInstruction">
+      <div>
+        <button (click)="closeEditPopup()" class="cancel_btn">x</button>
+      </div>
+      <div class="popup-content">
+        <textarea name="instruction" id="" cols="60" rows="15">{{selectedInstruction}}</textarea>
+        
+      </div>
+      
+    </div>
+</div>
+  

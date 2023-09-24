@@ -1,0 +1,79 @@
+<div class="div_container">
+  <div class="mycard card" style="width: 20rem" *ngFor="let item of menusItem">
+    <img src="{{ item.image }}" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{ item.name }}</h5>
+      <!-- <textarea class="card-text" rows="5" cols="30" onscroll="">{{item.details}}</textarea> -->
+      <p class="card-text">Category - {{ item.category }}</p>
+      <p class="card-text">Price - {{ item.price }}</p>
+      <button class="card-link" (click)="showEditPopupFun(item.id)">Edit</button>
+      <button  class="card-link" (click)="deleteDish(item.id)">Delete</button>
+    </div>
+
+    <div class="card-body"></div>
+  </div>
+
+  <div class="popup" *ngIf="showEditPopup">
+    <form
+      #updatePopup="ngForm"
+      class="popup-content"
+      (ngSubmit)="updateDish(updatePopup.value)"
+    >
+      <h2>Edit Dish</h2>
+      <div id="id_field">
+        <label>Id:</label>
+        <input
+          type="number"
+          name="id"
+          [(ngModel)]="selectedItem.id"
+          
+          placeholder="Enter Id"
+        />
+      </div>
+      <div>
+        <label>Name:</label>
+        <input
+          type="text"
+          name="name"
+          [(ngModel)]="selectedItem.name"
+          
+          placeholder="Enter Name"
+        />
+      </div>
+      <div>
+        <label>Category:</label>
+        <input
+          type="text"
+          name="category"
+          [(ngModel)]="selectedItem.category"
+          
+          placeholder="Enter Category"
+        />
+      </div>
+      <div>
+        <label>Price:</label>
+        <input
+          type="number"
+          name="price"
+          [(ngModel)]="selectedItem.price"
+          
+          placeholder="Enter Price"
+        />
+      </div>
+      <div>
+        <label>Image-Url:</label>
+        <input
+          type="text"
+          name="image"
+          [(ngModel)]="selectedItem.image"
+          
+          placeholder="Enter Image-Url"
+        />
+      </div>
+      <div>
+        <button type="submit">Save</button>
+        <button (click)="closeEditPopup()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>

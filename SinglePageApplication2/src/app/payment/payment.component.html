@@ -1,0 +1,13 @@
+<h2>Click PayPal to make Payment</h2>
+
+<div class="payment_container">
+
+    <div class="amount">
+        Total amount to pay: <span>₨.{{myamount}}</span>
+    </div>
+    
+    <div class="info">Please do not refresh the browser while the transactions is processing</div>
+
+    <div #paymentRef class="paypal_btn"></div>
+    <div class="back" (click)="cancel()">Cancel</div>
+</div>

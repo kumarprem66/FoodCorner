@@ -1,0 +1,22 @@
+<nav class="nav">
+
+    <h1><a routerLink="/">Food-Corner</a></h1>
+    <div  *ngIf="menuType==='default'" class="nav-search">
+        <input type="text" placeholder="search for Products">
+        <button>Search</button>
+    </div>
+    <div [ngSwitch]="menuType">
+        <ul *ngSwitchCase="'default'">
+            <li><a routerLink="">Home</a></li>
+            <li><a routerLink="seller-home">Seller</a></li>
+            <li><a routerLink="login">{{sellerName}}</a></li>
+            <li><a routerLink="cart">Cart({{cart_value}})</a></li>
+        </ul>
+        <ul *ngSwitchCase="'seller'">
+            <li><a routerLink="seller-home">Product List</a></li>
+            <li><a routerLink="seller-add-product">Add Products</a></li>
+            <li><a (click)="logout()">Logout</a></li>
+            <li><a href="#">{{sellerName | titlecase}}</a></li>
+        </ul>
+    </div>
+</nav>

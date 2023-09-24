@@ -1,0 +1,41 @@
+.div_container{
+    padding: 20px;
+
+    display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   margin: auto;
+   justify-content: space-between;
+
+}
+
+.div_container .mycard{
+    margin-bottom: 20px;
+  
+    height: auto
+}
+
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+#id_field{
+    display: none;
+}
+/* Additional styles for your cards, etc. */

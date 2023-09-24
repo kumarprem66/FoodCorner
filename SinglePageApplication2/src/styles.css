@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    box-sizing: border-box;
+}
+
+.common-form{
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: auto;
+}
+
+.form-input{
+
+    height: 35px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border: 1px solid blueviolet;
+
+}
+.form-button{
+
+    height: 35px;
+    border: 1px solid blueviolet;
+    cursor: pointer;
+}
+
+.error_p{
+    color: red;
+}
+
+h1 a{
+    text-decoration: none;
+    color: blueviolet;
+}
+
+.message-h3{
+    color: green;
+  
+}

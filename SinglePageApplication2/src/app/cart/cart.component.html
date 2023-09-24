@@ -1,0 +1,47 @@
+<div class="cart-container">
+    <div class="left-section">
+
+      <div class="cart-items">
+        <!-- Display cart items here -->
+
+        <div id="mycard"  *ngFor="let item of menusItem">
+        
+            <img src="{{ item.image }}" class="card-img-top" alt="..." />
+                
+            
+            <div>
+                <div>
+                    <h5 class="card-title">{{ item.name }}</h5>
+                    
+                    <p class="card-text">Category - {{ item.category }}</p>
+                    <p class="card-text price_p">Price - {{ item.price }}</p>
+    
+                </div>
+                <textarea class="card-text" rows="3" cols="60">{{item.details}}</textarea>
+                <div>
+                    <button class="card-link inc" (click)="increment(item.id)">+</button>
+                    <input type="number" class="cart_item_value" [(ngModel)]="item.quantity"> 
+                    <button class="card-link desc" (click)="decrement(item.id)">-</button>
+                </div>  
+                
+                  
+                
+                <div>
+                    <button class="card-link buy_now_btn"  (click)="buy_now(item.id,item.price,item.quantity)">Buy Now</button> 
+                </div>
+            </div>
+
+      </div>
+
+
+    </div>
+    </div>
+    <div class="right-section">
+      <h1>Total Price: {{totalprice}}</h1>
+      <div class="payment-methods">
+        <!-- Display payment methods here -->
+      </div>
+      <button class="checkout-button" (click)="checkoutPay()">Checkout</button>
+    </div>
+</div>
+  

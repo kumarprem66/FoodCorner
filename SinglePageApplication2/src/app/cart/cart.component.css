@@ -1,0 +1,92 @@
+.cart-container {
+    display: flex;
+    margin-top: 30px;
+    height: 80vh;
+  }
+  
+  .left-section {
+    flex: 70%; /* 70% width */
+  
+    /* padding: 20px; */
+  }
+  
+  .right-section {
+    flex: 30%; /* 30% width */
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+
+    right: 50px;
+    bottom: 50px;
+    position: fixed;
+    height: 80%;
+    margin-left: 20px;
+
+
+  }
+  
+  /* Additional styling for cart items, payment methods, and checkout button */
+
+  
+  .checkout-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .checkout-button:hover {
+    background-color: #0056b3;
+  }
+  
+
+  #mycard{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #f2f2f2;
+
+
+  }
+
+  #mycard> div{
+   padding: 10px 10px 10px 20px;
+  }
+
+  .cart_item_value{
+    width: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .inc,.desc{
+    width: 40px;
+    border: none;
+    background-color: green;
+  }
+
+  .buy_now_btn{
+ 
+    padding: 5px 10px 5px 10px;
+    color: white;
+    border: none;
+    background-color: blue;
+    border-radius: 10px;
+  }
+
+  img{
+    
+    border-radius: 10px;
+    width: 15em;
+  }
+
+  .price_p{
+    margin-top: -20px;
+  }
